@@ -41,9 +41,7 @@ Skills
 
 Publications
 ======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+  <ul>https://www.cell.com/iscience/fulltext/S2589-0042(24)00772-7</ul>
   
 Talks
 ======
