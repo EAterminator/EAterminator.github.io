@@ -15,8 +15,6 @@ Education
 
 Honors and awards
 ======
-# Awards and Honors
-
 - **November 2024**: 1st Prize in the 16th National College Student Mathematics Competition (Guangdong Region)
 - **November 2024**: Excellent Poster Award at the "Academic Exchange Day" of the Department of Biomedical Engineering, Southern University of Science and Technology
 - **October 2024**: "Futu Rui" Scholarship of the Department of Biomedical Engineering, Southern University of Science and Technology
@@ -29,7 +27,6 @@ Honors and awards
 - **September 2021**: 1st Prize in the 38th National High School Physics Competition (Anhui Region)
 
 # Academic Performance:
-
 - **GPA**: 3.85  
 - **Major Ranking**: 5/42
   
