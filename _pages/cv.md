@@ -42,7 +42,9 @@ Skills
 Publications
 ======
   <ul>{% for post in site.publications reversed %}
-    {% include https://www.cell.com/iscience/fulltext/S2589-0042(24)00772-7 %}
+    {% Integration of cognitive tasks into artificial general intelligence test for large models
+Qu, Youzhi et al.
+iScience, Volume 27, Issue 4, 109550 %}
   {% endfor %}</ul>
   
 Talks
