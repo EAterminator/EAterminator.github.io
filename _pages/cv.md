@@ -15,20 +15,23 @@ Education
 
 Honors and awards
 ======
-* Fall 2024: Academic Pages Collaborator
-  * Github University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+# Awards and Honors
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+- **November 2024**: 1st Prize in the 16th National College Student Mathematics Competition (Guangdong Region)
+- **November 2024**: Excellent Poster Award at the "Academic Exchange Day" of the Department of Biomedical Engineering, Southern University of Science and Technology
+- **October 2024**: "Futu Rui" Scholarship of the Department of Biomedical Engineering, Southern University of Science and Technology
+- **September 2024**: Second-Class Scholarship for Outstanding Students of Zhixin College
+- **June 2024**: 2nd Prize in the 3rd Guangdong Province College Student Biomedical Engineering Innovation and Entrepreneurship Design Competition
+- **November 2023**: Excellent Award in the "Challenge Cup" (University-Level)
+- **September 2023**: Third-Class Scholarship for Outstanding Students of Zhixin College
+- **November 2023**: 3rd Prize in the 15th National College Student Mathematics Competition (Guangdong Region)
+- **November 2022**: 3rd Prize in the Guangdong Province "Yanxing Cup" College Student English Application Ability Competition (University-Level)
+- **September 2021**: 1st Prize in the 38th National High School Physics Competition (Anhui Region)
 
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+# Academic Performance:
+
+- **GPA**: 3.85  
+- **Major Ranking**: 5/42
   
 Skills
 ======
