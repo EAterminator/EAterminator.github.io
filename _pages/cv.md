@@ -11,11 +11,11 @@ redirect_from:
 
 Education
 ======
-* B.S. in Intelligent Medical Engineering, Southern University of Science and Technology, 2012
+* B.S. in Intelligent Medical Engineering, Southern University of Science and Technology, 2022-present
 
-Work experience
+Honors and awards
 ======
-* Spring 2024: Academic Pages Collaborator
+* Fall 2024: Academic Pages Collaborator
   * Github University
   * Duties includes: Updates and improvements to template
   * Supervisor: The Users
@@ -53,9 +53,8 @@ Talks
   
 Teaching
 ======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+* Spring 2024 
+ * Student mentor for college physics
   
 Service and leadership
 ======
