@@ -37,7 +37,7 @@ Skills
 * Java
 * Matlab
 
-### Publications
+Publications
 ======
 - [**Integration of cognitive tasks into artificial general intelligence test for large models**](https://doi.org/10.1016/j.isci.2023.109550)  
   **Qu, Youzhi** et al.  
