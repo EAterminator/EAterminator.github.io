@@ -41,9 +41,11 @@ Publications
 ======
 - [**Integration of cognitive tasks into artificial general intelligence test for large models**](https://doi.org/10.1016/j.isci.2023.109550)  
   Youzhi Qu, Chen Wei, Penghui Du, Wenxin Che, **Chi Zhang**, Wanli Ouyang, Yatao Bian, Feiyang Xu, Bin Hu, Kai Du, Haiyan Wu, Jia Liu, Quanying Liu
+
   *iScience*, Volume 27, Issue 4, Article 109550
 - [**Promoting interactions between cognitive science and large language models**](https://example.com/link-to-your-paper)  
   Youzhi Qu, Penghui Du, Wenxin Che, Chen Wei, **Chi Zhang**, Wanli Ouyang, Yatao Bian, Feiyang Xu, Bin Hu, Kai Du, Haiyan Wu, Jia Liu, Quanying Liu 
+
   *The Innovation*, Volume 5, Issue 2, 100579
   
 Teaching
