@@ -18,12 +18,11 @@ Honors and awards
 - **November 2024**: 1st Prize in the 16th National College Student Mathematics Competition (Guangdong Region)
 - **November 2024**: Excellent Poster Award at the "Academic Exchange Day" of the Department of Biomedical Engineering, Southern University of Science and Technology
 - **October 2024**: "Futu Rui" Scholarship of the Department of Biomedical Engineering, Southern University of Science and Technology
-- **September 2024**: Second-Class Scholarship for Outstanding Students of Zhixin College
+- **September 2024**: Second-Class Scholarship for Outstanding Students of Zhixin College, SUSTech
 - **June 2024**: 2nd Prize in the 3rd Guangdong Province College Student Biomedical Engineering Innovation and Entrepreneurship Design Competition
 - **November 2023**: Excellent Award in the "Challenge Cup" (University-Level)
-- **September 2023**: Third-Class Scholarship for Outstanding Students of Zhixin College
+- **September 2023**: Third-Class Scholarship for Outstanding Students of Zhixin College, SUSTech
 - **November 2023**: 3rd Prize in the 15th National College Student Mathematics Competition (Guangdong Region)
-- **November 2022**: 3rd Prize in the Guangdong Province "Yanxing Cup" College Student English Application Ability Competition (University-Level)
 - **September 2021**: 1st Prize in the 38th National High School Physics Competition (Anhui Region)
 
 # Academic Performance:
@@ -38,13 +37,16 @@ Skills
 * Java
 * Matlab
 
-Publications
+### Publications
 ======
-  <ul>{% for post in site.publications reversed %}
-    {% Integration of cognitive tasks into artificial general intelligence test for large models
-Qu, Youzhi et al.
-iScience, Volume 27, Issue 4, 109550 %}
-  {% endfor %}</ul>
+- [**Integration of cognitive tasks into artificial general intelligence test for large models**](https://doi.org/10.1016/j.isci.2023.109550)  
+  **Qu, Youzhi** et al.  
+  *iScience*, Volume 27, Issue 4, Article 109550
+
+- [**另一篇文章的标题**](https://example.com/link-to-your-paper)  
+  **作者姓名** et al.  
+  *期刊名称*, Volume X, Issue Y, Page Z
+
   
 Talks
 ======
