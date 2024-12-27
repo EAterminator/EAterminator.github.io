@@ -40,25 +40,12 @@ Skills
 Publications
 ======
 - [**Integration of cognitive tasks into artificial general intelligence test for large models**](https://doi.org/10.1016/j.isci.2023.109550)  
-  **Qu, Youzhi** et al.  
+  Youzhi Qu, Chen Wei, Penghui Du, Wenxin Che, **Chi Zhang**, Wanli Ouyang, Yatao Bian, Feiyang Xu, Bin Hu, Kai Du, Haiyan Wu, Jia Liu, Quanying Liu
   *iScience*, Volume 27, Issue 4, Article 109550
-
-- [**另一篇文章的标题**](https://example.com/link-to-your-paper)  
-  **作者姓名** et al.  
-  *期刊名称*, Volume X, Issue Y, Page Z
-
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
+- [**Promoting interactions between cognitive science and large language models**](https://example.com/link-to-your-paper)  
+  Youzhi Qu, Penghui Du, Wenxin Che, Chen Wei, **Chi Zhang**, Wanli Ouyang, Yatao Bian, Feiyang Xu, Bin Hu, Kai Du, Haiyan Wu, Jia Liu, Quanying Liu 
+  *The Innovation*, Volume 5, Issue 2, 100579
   
 Teaching
 ======
-* Spring 2024 
- * Student mentor for college physics
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+* **Spring 2024**: Student mentor for college physics
