@@ -15,7 +15,7 @@ Education
 
 Honors and awards
 ======
-- **November 2024**: 1st Prize in the 16th National College Student Mathematics Competition (Guangdong Region)
+- **November 2024**: 1st Prize in the 16th Chinese Mathematics Competition (Guangdong Region)
 - **November 2024**: Excellent Poster Award at the "Academic Exchange Day" of the Department of Biomedical Engineering, Southern University of Science and Technology
 - **October 2024**: "Futu Rui" Scholarship of the Department of Biomedical Engineering, Southern University of Science and Technology
 - **September 2024**: Second-Class Scholarship for Outstanding Students of Zhixin College, SUSTech
@@ -23,11 +23,11 @@ Honors and awards
 - **November 2023**: Excellent Award in the "Challenge Cup" (University-Level)
 - **September 2023**: Third-Class Scholarship for Outstanding Students of Zhixin College, SUSTech
 - **November 2023**: 3rd Prize in the 15th National College Student Mathematics Competition (Guangdong Region)
-- **September 2021**: 1st Prize in the 38th National High School Physics Competition (Anhui Region)
+- **September 2021**: 1st Prize in the 38th Chinese Physics Olympics (Anhui Region)
 
 # Academic Performance:
-- **GPA**: 3.85  
-- **Major Ranking**: 5/42
+- **GPA**: 3.86  
+- **Major Ranking**: 4/41
   
 Skills
 ======
@@ -39,6 +39,8 @@ Skills
 
 Publications
 ======
+- [**Synthesizing Images on Perceptual Boundaries of ANNs for Uncovering and Manipulating Human Perceptual Variability](https://arxiv.org/abs/2505.03641)
+  Chen Wei<sup>1</sup>, **Chi Zhang<sup>1</sup>**, Jiachen Zou, Haotian Deng, Dietmar Heinke, Quanying Liu
 - [**Integration of cognitive tasks into artificial general intelligence test for large models**](https://doi.org/10.1016/j.isci.2023.109550)  
   Youzhi Qu, Chen Wei, Penghui Du, Wenxin Che, **Chi Zhang**, Wanli Ouyang, Yatao Bian, Feiyang Xu, Bin Hu, Kai Du, Haiyan Wu, Jia Liu, Quanying Liu
 
