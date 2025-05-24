@@ -11,8 +11,8 @@ redirect_from:
 
 Education
 ======
-* B.S. in Intelligent Medical Engineering, Southern University of Science and Technology, 2022-present
-* Exchange student at the Faculty of Applied Science and Engineering, University of Toronto, Jan. 2025-Apr. 2025 (GPA: 4/4, all A+)
+* B.S. in Intelligent Medical Engineering, Southern University of Science and Technology(SUSTech), 2022-present
+* **Tuition-free** exchange student at the Faculty of Applied Science and Engineering, University of Toronto(4 spots in SUSTech every year), Jan. 2025-Apr. 2025 (GPA: 4/4, all A+)
 
 Honors and Awards
 ======
