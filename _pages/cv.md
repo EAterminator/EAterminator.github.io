@@ -41,11 +41,11 @@ Skills
 Publications
 ======
 - [**Synthesizing Images on Perceptual Boundaries of ANNs for Uncovering and Manipulating Human Perceptual Variability**](https://arxiv.org/abs/2505.03641)
-  Chen Wei<sup>1</sup>, **Chi Zhang<sup>1</sup>**, Jiachen Zou, Haotian Deng, Dietmar Heinke, Quanying Liu, Co-first author
+  Chen Wei<sup>1</sup>, **Chi Zhang<sup>1</sup>**, Jiachen Zou, Haotian Deng, Dietmar Heinke, Quanying Liu, <sup>1</sup> means co-first author
 
   *ICML2025 poster*
 - [**Synthesizing Images on Perceptual Boundaries of ANNs for Uncovering Human Perceptual Variability on Facial Expressions**]
-  Haotian Deng<sup>1</sup>, **Chi Zhang<sup>1</sup>**, Chen Wei, Quanying Liu, Co-first author
+  Haotian Deng<sup>1</sup>, **Chi Zhang<sup>1</sup>**, Chen Wei, Quanying Liu, <sup>1</sup> means co-first author
 
   *IJCNN2025 poster*
 - [**Integration of cognitive tasks into artificial general intelligence test for large models**](https://doi.org/10.1016/j.isci.2023.109550)  
