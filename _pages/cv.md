@@ -19,11 +19,10 @@ Honors and awards
 - **November 2024**: 1st Prize in the 16th Chinese Mathematics Competition (Guangdong Region)
 - **November 2024**: Excellent Poster Award at the "Academic Exchange Day" of the Department of Biomedical Engineering, Southern University of Science and Technology
 - **October 2024**: "Futu Rui" Scholarship of the Department of Biomedical Engineering, Southern University of Science and Technology
-- **September 2024**: Second-Class Scholarship for Outstanding Students of Zhixin College, SUSTech
+- **September 2024**: Scholarship for Outstanding Students of Zhixin College, SUSTech
 - **June 2024**: 2nd Prize in the 3rd Guangdong Province College Student Biomedical Engineering Innovation and Entrepreneurship Design Competition
 - **November 2023**: Excellent Award in the "Challenge Cup" (University-Level)
-- **September 2023**: Third-Class Scholarship for Outstanding Students of Zhixin College, SUSTech
-- **November 2023**: 3rd Prize in the 15th National College Student Mathematics Competition (Guangdong Region)
+- **September 2023**: Scholarship for Outstanding Students of Zhixin College, SUSTech
 - **September 2021**: 1st Prize in the 38th Chinese Physics Olympics (Anhui Region)
 
 # Academic Performance:
