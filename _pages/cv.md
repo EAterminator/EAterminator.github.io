@@ -14,7 +14,7 @@ Education
 * B.S. in Intelligent Medical Engineering, Southern University of Science and Technology, 2022-present
 * Exchange student at the Faculty of Applied Science and Engineering, University of Toronto, Jan. 2025-Apr. 2025 (GPA: 4/4, all A+)
 
-Honors and awards
+Honors and Awards
 ======
 - **November 2024**: 1st Prize in the 16th Chinese Mathematics Competition (Guangdong Region)
 - **November 2024**: Excellent Poster Award at the "Academic Exchange Day" of the Department of Biomedical Engineering, Southern University of Science and Technology
