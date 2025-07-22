@@ -27,7 +27,6 @@ Honors and Awards
 
 # Academic Performance:
 - **GPA**: 3.86  
-- **Major Ranking**: 4/41
   
 Skills
 ======
