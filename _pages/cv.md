@@ -26,7 +26,7 @@ Honors and Awards
 - **September 2021**: 1st Prize in the 38th Chinese Physics Olympics (Anhui Region)
 
 # Academic Performance:
-- **GPA**: 3.86  
+- **GPA**: 3.86/4  
   
 Skills
 ======
