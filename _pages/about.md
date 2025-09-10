@@ -26,7 +26,7 @@ May 1st, 2025: Our work, [Synthesizing Images on Perceptual Boundaries of ANNs f
 
 April 28th, 2025: I finished my exhange at University of Toronto with GPA 4/4 (all A+)! Such an incredible journey!
 
-April 1st, 2025: Our work, Synthesizing Images on Perceptual Boundaries of ANNs for Uncovering Human Perceptual Variability on Facial Expressions, has been accepted at IJCNN 2025!
+April 1st, 2025: Our work, [Synthesizing Images on Perceptual Boundaries of ANNs for Uncovering Human Perceptual Variability on Facial Expressions](https://arxiv.org/abs/2507.14549), has been accepted at IJCNN 2025 as an oral presentation!
 
 Jan 12th, 2025: I started my exchange at University of Toronto!
 
