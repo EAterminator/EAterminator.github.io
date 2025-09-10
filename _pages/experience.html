@@ -1,244 +1,145 @@
 ---
+title: Experience
 permalink: /experience/
-layout: null
+layout: page   # 若你的主题没有 page 布局，可改成 default
 ---
 
-<!doctype html>
-<html lang="zh-CN">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>经历 Experience</title>
-  <meta name="description" content="个人经历时间轴与项目展示" />
-  <meta name="color-scheme" content="light dark" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💼</text></svg>">
-  <!-- 防止与站点主题样式冲突：用局部命名空间 .xp-* 包裹 -->
-  <style>
-    :root {
-      --xp-bg: #fff; --xp-fg: #111; --xp-muted: #5b6470; --xp-card:#f6f8fb;
-      --xp-acc:#2f6fec; --xp-acc-soft:#e7efff; --xp-border:#e6e8eb;
-      --xp-shadow: 0 8px 24px rgba(0,0,0,.06); --xp-radius:14px;
-      --xp-font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC",
-                 "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", Arial, "Apple Color Emoji","Segoe UI Emoji";
-    }
-    @media (prefers-color-scheme: dark){
-      :root{--xp-bg:#0f1115; --xp-fg:#e8ebf0; --xp-muted:#a0a7b4; --xp-card:#171a21; --xp-acc:#7aa2ff; --xp-acc-soft:#1f2633; --xp-border:#262a33; --xp-shadow:0 8px 24px rgba(0,0,0,.45);}
-    }
-    :root[data-theme="dark"]{--xp-bg:#0f1115; --xp-fg:#e8ebf0; --xp-muted:#a0a7b4; --xp-card:#171a21; --xp-acc:#7aa2ff; --xp-acc-soft:#1f2633; --xp-border:#262a33; --xp-shadow:0 8px 24px rgba(0,0,0,.45);}
-    /* 页面命名空间 */
-    .xp {font-family: var(--xp-font); color: var(--xp-fg); background: var(--xp-bg); line-height:1.6; margin:0;}
-    .xp a {color: inherit;}
-    .xp .wrap {max-width: 1000px; margin: 0 auto; padding: 28px 20px 80px;}
-    .xp-header {
-      position: sticky; top: 0; z-index: 10; background: color-mix(in oklab, var(--xp-bg) 80%, transparent);
-      backdrop-filter: saturate(120%) blur(8px); border-bottom: 1px solid var(--xp-border);
-    }
-    .xp-nav {display:flex; align-items:center; gap:14px; justify-content:space-between; padding:14px 20px;}
-    .xp-brand {display:flex; gap:12px; align-items:center;}
-    .xp-avatar {width:44px;height:44px;border-radius:50%;background:var(--xp-acc-soft);display:grid;place-items:center;border:1px solid var(--xp-border);font-size:20px;}
-    .xp-title h1{margin:0; font-size:18px; font-weight:700;}
-    .xp-title p{margin:0; color:var(--xp-muted); font-size:13px;}
-    .xp-links{display:flex; gap:10px; flex-wrap:wrap;}
-    .xp-chip{font-size:13px; padding:8px 12px; border-radius:999px; background:var(--xp-card); border:1px solid var(--xp-border); text-decoration:none; cursor:pointer;}
-    .xp-chip:hover{background:var(--xp-acc-soft);}
-    .xp-chip.acc{background:var(--xp-acc); color:#fff; border-color:transparent;}
-    .xp-main{margin-top:18px;}
-    .xp-section{margin:42px 0;}
-    .xp-section h2{margin:0 0 16px; font-size:22px; letter-spacing:.2px;}
-    .xp-intro{background:var(--xp-card); border:1px solid var(--xp-border); border-radius:var(--xp-radius); box-shadow:var(--xp-shadow); padding:18px; display:grid; gap:8px;}
-    .xp-intro .meta{display:flex; gap:10px; flex-wrap:wrap;}
-    .xp-grid{display:grid; gap:22px;}
-    @media (min-width: 900px){ .xp-grid{grid-template-columns:1.25fr .75fr;} }
-    /* 筛选器 */
-    .xp-filters{display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-bottom:12px;}
-    .xp-filters label{font-size:13px; color:var(--xp-muted);}
-    .xp-filters .xp-chip[data-active="true"]{outline: 2px solid var(--xp-acc);}
-    /* 时间轴 */
-    .xp-timeline{list-style:none; margin:0; padding-left:22px; position:relative;}
-    .xp-timeline::before{content:""; position:absolute; left:6px; top:0; bottom:0; width:2px; background:var(--xp-border);}
-    .xp-item{position:relative; margin:14px 0 18px; background:var(--xp-card); border:1px solid var(--xp-border); border-radius:var(--xp-radius); box-shadow:var(--xp-shadow); padding:16px;}
-    .xp-item::before{content:""; position:absolute; left:-12px; top:20px; width:10px;height:10px;border-radius:50%;background:var(--xp-acc); box-shadow:0 0 0 3px var(--xp-bg);}
-    .xp-item header{display:grid; gap:6px;}
-    .xp-item h3{margin:0; font-size:16px;}
-    .xp-sub{color:var(--xp-muted); font-size:13px;}
-    .xp-tags{display:flex; gap:6px; flex-wrap:wrap; margin-top:6px;}
-    .xp-tag{font-size:12px; padding:4px 8px; border-radius:999px; background:var(--xp-acc-soft); border:1px solid var(--xp-border);}
-    .xp-content{margin-top:8px;}
-    .xp-content ul{margin:8px 0 0 18px;}
-    .xp-meta{display:flex; gap:12px; flex-wrap:wrap; margin-top:8px; font-size:12px; color:var(--xp-muted);}
-    .xp-actions{display:flex; gap:8px; flex-wrap:wrap; margin-top:10px;}
-    .xp-mono{font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;}
-    /* 侧栏卡片 */
-    .xp-card{background:var(--xp-card); border:1px solid var(--xp-border); border-radius:var(--xp-radius); box-shadow:var(--xp-shadow); padding:16px;}
-    footer.xp-foot{margin-top:60px; color:var(--xp-muted); font-size:12px; text-align:center;}
-    /* 打印优化 */
-    @media print{
-      .xp-header, .xp-filters, .xp-actions{display:none !important;}
-      .xp {background:#fff; color:#000;}
-      .xp-item, .xp-intro, .xp-card{box-shadow:none;}
-      a{color:#000; text-decoration:underline;}
-    }
-  </style>
-</head>
-<body class="xp">
-  <!-- 顶部（不依赖站点主题） -->
-  <header class="xp-header">
-    <nav class="xp-nav wrap" aria-label="页面导航">
-      <div class="xp-brand">
-        <div class="xp-avatar" aria-hidden="true">💼</div>
-        <div class="xp-title">
-          <h1>你的名字</h1>
-          <p>职位头衔 · 城市/远程 · <a href="mailto:you@example.com">you@example.com</a></p>
+<section class="experience">
+  <h1 class="experience__title">Experience</h1>
+
+  <!-- 工作经历 -->
+  <h2 class="experience__section">Work</h2>
+  <ul class="experience__list">
+    <!-- 单项示例 1 -->
+    <li class="experience__item">
+      <div class="experience__icon" aria-hidden="true">💻</div>
+      <div class="experience__body">
+        <div class="experience__head">
+          <span class="experience__role">Senior Frontend Engineer</span>
+          <span class="experience__sep">·</span>
+          <span class="experience__org">Example A</span>
+          <span class="experience__time">2023.06 – Present · Remote</span>
         </div>
+        <p class="experience__desc">
+          负责设计系统与核心组件；聚焦性能与可用性，推动前端可观测性建设。
+        </p>
+        <ul class="experience__tags">
+          <li>React</li><li>TypeScript</li><li>Design System</li><li>Performance</li>
+        </ul>
       </div>
-      <div class="xp-links">
-        <a class="xp-chip" href="/">返回首页</a>
-        <a class="xp-chip" href="#experience">经历</a>
-        <a class="xp-chip" href="#projects">项目</a>
-        <a class="xp-chip" href="#education">教育</a>
-        <a class="xp-chip acc" href="#contact">联系</a>
-        <button id="xpTheme" class="xp-chip" aria-pressed="false">🌗 主题</button>
+    </li>
+
+    <!-- 单项示例 2 -->
+    <li class="experience__item">
+      <div class="experience__icon" aria-hidden="true">🛠️</div>
+      <div class="experience__body">
+        <div class="experience__head">
+          <span class="experience__role">Tech Lead</span>
+          <span class="experience__sep">·</span>
+          <span class="experience__org">Example B</span>
+          <span class="experience__time">2021.03 – 2023.05 · Shanghai</span>
+        </div>
+        <p class="experience__desc">
+          搭建电商中台与 CI/CD 流水线，落地工程标准与质量体系。
+        </p>
+        <ul class="experience__tags">
+          <li>Node.js</li><li>PostgreSQL</li><li>CI/CD</li>
+        </ul>
       </div>
-    </nav>
-  </header>
+    </li>
+  </ul>
 
-  <main class="xp-main wrap" id="xpRoot">
-    <!-- 介绍 -->
-    <section class="xp-section xp-intro" id="about">
-      <h2>关于我</h2>
-      <p><!-- TODO: 电梯陈述 -->具有 X 年经验的前端/全栈工程师，擅长性能优化与工程化，热爱把复杂问题变简单。</p>
-      <div class="meta">
-        <span class="xp-chip">🏆 OSS 贡献者</span>
-        <span class="xp-chip">⚙️ 性能优化</span>
-        <span class="xp-chip">🧪 工程质量</span>
+  <!-- 项目 -->
+  <h2 class="experience__section">Projects</h2>
+  <ul class="experience__list">
+    <li class="experience__item">
+      <div class="experience__icon" aria-hidden="true">📊</div>
+      <div class="experience__body">
+        <div class="experience__head">
+          <span class="experience__role">Data Dashboard</span>
+          <span class="experience__sep">·</span>
+          <span class="experience__org"><a href="https://example.com" target="_blank" rel="noreferrer">Demo</a></span>
+          <span class="experience__time">2024</span>
+        </div>
+        <p class="experience__desc">
+          面向数据密集场景的可视化看板，支持虚拟列表与导出 PDF/CSV。
+        </p>
+        <ul class="experience__tags">
+          <li>Vue</li><li>Vite</li><li>ECharts</li>
+        </ul>
       </div>
-    </section>
+    </li>
+  </ul>
 
-    <div class="xp-grid">
-      <div>
-        <!-- 经历 -->
-        <section class="xp-section" id="experience" aria-labelledby="xp-exp">
-          <h2 id="xp-exp">经历</h2>
-
-          <!-- 筛选器 -->
-          <div class="xp-filters" role="group" aria-label="标签筛选">
-            <label>筛选：</label>
-            <button class="xp-chip" data-filter="all" data-active="true">全部</button>
-            <button class="xp-chip" data-filter="前端">前端</button>
-            <button class="xp-chip" data-filter="全栈">全栈</button>
-            <button class="xp-chip" data-filter="管理">管理</button>
-            <button class="xp-chip" data-filter="远程">远程</button>
-          </div>
-
-          <ol class="xp-timeline" id="xpTimeline" aria-live="polite">
-            <!-- 单条经历 1 -->
-            <li class="xp-item" data-tags="前端 远程 SaaS">
-              <header>
-                <h3>高级前端工程师 @ 示例公司 A</h3>
-                <div class="xp-sub">2023.06 – 至今 · 远程</div>
-                <div class="xp-tags">
-                  <span class="xp-tag">前端</span><span class="xp-tag">SaaS</span>
-                  <span class="xp-tag">React</span><span class="xp-tag">性能</span>
-                </div>
-              </header>
-              <div class="xp-content">
-                <ul>
-                  <li>牵头设计系统与组件库，核心组件覆盖率 90%，交互一致性显著提升。</li>
-                  <li>首页 TTI 从 <span class="xp-mono">4.8s</span> 优化到 <span class="xp-mono">1.9s</span>（P95），转化率 +12%。</li>
-                  <li>落地前端可观测性（RUM + Sentry），定位并修复崩溃 30+。</li>
-                </ul>
-                <div class="xp-meta">
-                  <span>规模：B 轮 · 80 人</span><span>协作：设计 / 后端 / 数据</span>
-                </div>
-                <div class="xp-actions">
-                  <a class="xp-chip" target="_blank" rel="noreferrer" href="https://example.com">产品链接</a>
-                  <button class="xp-chip" data-toggle="details">展开更多</button>
-                </div>
-                <div class="xp-more" hidden>
-                  <ul>
-                    <li>搭建 Monorepo（pnpm + changeset），发布流程时长 -60%。</li>
-                    <li>建立可访问性基线（WCAG 2.1 AA），键盘覆盖 100%。</li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-
-            <!-- 单条经历 2 -->
-            <li class="xp-item" data-tags="全栈 管理 本地部署">
-              <header>
-                <h3>技术负责人 @ 示例公司 B</h3>
-                <div class="xp-sub">2021.03 – 2023.05 · 上海</div>
-                <div class="xp-tags">
-                  <span class="xp-tag">全栈</span><span class="xp-tag">管理</span>
-                  <span class="xp-tag">Node.js</span><span class="xp-tag">Postgres</span>
-                </div>
-              </header>
-              <div class="xp-content">
-                <ul>
-                  <li>从 0 到 1 搭建电商中台，GTM 三个月成交额破 500w。</li>
-                  <li>引入 CI/CD，发布频率从每周 1 次提升至每日多次。</li>
-                </ul>
-                <div class="xp-meta">
-                  <span>团队：8 人</span><span>职责：路线 / 招聘 / 质量</span>
-                </div>
-              </div>
-            </li>
-
-            <!-- 单条经历 3 -->
-            <li class="xp-item" data-tags="前端 远程 开源">
-              <header>
-                <h3>前端工程师 @ 自由职业</h3>
-                <div class="xp-sub">2019.07 – 2021.02 · 远程</div>
-                <div class="xp-tags">
-                  <span class="xp-tag">前端</span><span class="xp-tag">开源</span>
-                  <span class="xp-tag">Vue</span><span class="xp-tag">TypeScript</span>
-                </div>
-              </header>
-              <div class="xp-content">
-                <ul>
-                  <li>交付 10+ 客户项目（落地页/小程序），平均 NPS 9.2。</li>
-                  <li>维护 2 个开源库，累计 GitHub Star 1k+。</li>
-                </ul>
-              </div>
-            </li>
-          </ol>
-        </section>
-
-        <!-- 项目 -->
-        <section class="xp-section" id="projects">
-          <h2>项目</h2>
-          <div class="xp-card">
-            <header>
-              <h3>项目名称 · <a target="_blank" rel="noreferrer" href="https://example.com">demo</a></h3>
-              <div class="xp-sub">关键词：可视化 / 数据密集型 / 高性能</div>
-            </header>
-            <div class="xp-content">
-              <ul>
-                <li>虚拟列表 + 懒加载渲染 10w+ 行数据，滚动 P95 &lt; 16ms。</li>
-                <li>导出 PDF / CSV，国际化与权限控制完备。</li>
-              </ul>
-            </div>
-          </div>
-        </section>
+  <!-- 教育 -->
+  <h2 class="experience__section">Education</h2>
+  <ul class="experience__list">
+    <li class="experience__item">
+      <div class="experience__icon" aria-hidden="true">🎓</div>
+      <div class="experience__body">
+        <div class="experience__head">
+          <span class="experience__role">B.S. in Computer Science</span>
+          <span class="experience__sep">·</span>
+          <span class="experience__org">Some University</span>
+          <span class="experience__time">2015 – 2019</span>
+        </div>
+        <p class="experience__desc">
+          课程方向：数据结构、数据库、操作系统、人机交互。
+        </p>
       </div>
+    </li>
+  </ul>
+</section>
 
-      <!-- 侧栏 -->
-      <aside>
-        <section class="xp-section" id="education">
-          <h2>教育</h2>
-          <div class="xp-card">
-            <header>
-              <h3>某某大学 · 计算机科学学士</h3>
-              <div class="xp-sub">2015 – 2019 · GPA 3.7/4.0</div>
-            </header>
-            <div class="xp-content">
-              <p>课程：数据结构、数据库、操作系统、计算机网络、HCI。</p>
-            </div>
-          </div>
-        </section>
+<style>
+  /* 极简局部样式：尽量继承站点主题，仅做布局与间距 */
+  .experience { max-width: 900px; margin: 0 auto; }
+  .experience__title { margin-top: 0; }
+  .experience__section { margin: 2rem 0 0.75rem; }
+  .experience__list { list-style: none; padding: 0; margin: 0; }
 
-        <section class="xp-section" id="skills">
-          <h2>技能</h2>
-          <div class="xp-card">
-            <div class="xp-tags">
-              <span class="
+  .experience__item {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 0.9rem 1rem;
+    padding: 1rem 0;
+    border-top: 1px solid rgba(0,0,0,.08);
+  }
+  .experience__item:first-child { border-top: 0; }
+
+  /* 图标区域：用 emoji，无需外部资源；继承字体大小即可 */
+  .experience__icon {
+    width: 40px; height: 40px; line-height: 40px;
+    text-align: center; border-radius: 8px;
+    background: rgba(127,127,127,.08);
+  }
+
+  .experience__head {
+    display: flex; flex-wrap: wrap; align-items: baseline; gap: .4rem .6rem;
+    font-weight: 600;
+  }
+  .experience__sep { opacity: .5; }
+  .experience__org a { text-decoration: underline; }
+
+  .experience__time {
+    margin-left: auto;
+    font-weight: 400; opacity: .7; font-size: .95em;
+  }
+  @media (max-width: 640px) {
+    .experience__time { width: 100%; margin-left: 0; }
+  }
+
+  .experience__desc { margin: .4rem 0 0.6rem; }
+  .experience__tags { display: flex; flex-wrap: wrap; gap: .4rem; margin: 0; padding: 0; list-style: none; }
+  .experience__tags li {
+    font-size: .85em; padding: .2rem .5rem; border-radius: 999px;
+    border: 1px solid currentColor; opacity: .6;
+  }
+
+  /* 适配暗色主题（如果你的主题已处理暗色，这段也能自然继承） */
+  @media (prefers-color-scheme: dark) {
+    .experience__item { border-top-color: rgba(255,255,255,.12); }
+    .experience__icon { background: rgba(255,255,255,.06); }
+    .experience__tags li { border-color: rgba(255,255,255,.5); }
+  }
+</style>
