@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>你的名字 · 履历 / 作品</title>
+  <meta name="description" content="你的名字的个人履历、项目与教育经历展示。" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+
+  <!-- 结构化数据：根据需要填充 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "你的名字",
+    "jobTitle": "职位头衔",
+    "url": "https://你的域名.example",
+    "email": "mailto:you@example.com",
+    "sameAs": ["https://github.com/yourid","https://www.linkedin.com/in/yourid/"],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "当前公司（可选）"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #121417;
+      --muted: #5b6470;
+      --card: #f5f7fb;
+      --acc: #2f6fec;
+      --acc-soft: #e7efff;
+      --border: #e6e8eb;
+      --shadow: 0 6px 20px rgba(0,0,0,.06);
+      --radius: 14px;
+      --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC",
+              "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f1115;
+        --fg: #e8ebf0;
+        --muted: #a0a7b4;
+        --card: #171a21;
+        --acc: #7aa2ff;
+        --acc-soft: #1f2633;
+        --border: #262a33;
+        --shadow: 0 6px 20px rgba(0,0,0,.4);
+      }
+    }
+    /* 手动暗色模式切换时的覆盖 */
+    :root[data-theme="dark"] {
+      --bg: #0f1115;
+      --fg: #e8ebf0;
+      --muted: #a0a7b4;
+      --card: #171a21;
+      --acc: #7aa2ff;
+      --acc-soft: #1f2633;
+      --border: #262a33;
+      --shadow: 0 6px 20px rgba(0,0,0,.4);
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--font);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    .wrap {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 28px 20px 80px;
+    }
+    header.site {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      align-items: start;
+      position: sticky;
+      top: 0;
+      backdrop-filter: saturate(120%) blur(8px);
+      background: color-mix(in oklab, var(--bg) 80%, transparent);
+      border-bottom: 1px solid var(--border);
+      z-index: 20;
+      padding: 14px 20px;
+    }
+    .brand {
+      display: flex; gap: 14px; align-items: center;
+    }
+    .avatar {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--acc-soft);
+      display: grid; place-items: center; font-size: 22px;
+      border: 1px solid var(--border);
+    }
+    .title h1 { margin: 0; font-size: 18px; font-weight: 700; }
+    .title p { margin: 0; color: var(--muted); font-size: 13px; }
+    nav.toc {
+      display: flex; gap: 14px; align-items: center;
+      flex-wrap: wrap; justify-content: flex-end;
+    }
+    nav.toc a, .chip {
+      text-decoration: none;
+      color: var(--fg);
+      font-size: 13px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--card);
+      border: 1px solid var(--border);
+    }
+    nav.toc a:hover, .chip:hover { background: var(--acc-soft); }
+    .btn {
+      cursor: pointer; user-select: none;
+    }
+    .btn-ghost { background: transparent; border: 1px solid var(--border); }
+    .btn-acc { background: var(--acc); color: white; border: 1px solid transparent; }
+    .btn-acc:hover { filter: brightness(0.95); }
+
+    main { margin-top: 18px; }
+    section { margin: 42px 0; }
+    section h2 {
+      font-size: 22px; margin: 0 0 16px; letter-spacing: .2px;
+    }
+    .intro {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+      display: grid; gap: 10px;
+    }
+    .intro p { margin: 0; color: var(--muted); }
+    .intro .meta { display: flex; gap: 10px; flex-wrap: wrap; }
+    .intro .meta .chip { background: var(--acc-soft); border-color: transparent; }
+
+    /* 筛选器 */
+    .filters {
+      display: flex; gap: 10px; flex-wrap: wrap; align-items: center;
+      margin-bottom: 10px;
+    }
+    .filters label { font-size: 13px; color: var(--muted); margin-right: 6px; }
+    .filters .chip[data-active="true"] { outline: 2px solid var(--acc); }
+
+    /* 时间轴列表 */
+    .timeline {
+      position: relative; padding-left: 22px; list-style: none; margin: 0;
+    }
+    .timeline::before {
+      content: ""; position: absolute; left: 6px; top: 0; bottom: 0;
+      width: 2px; background: var(--border);
+    }
+    .item {
+      position: relative; margin: 14px 0 18px;
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--radius); box-shadow: var(--shadow); padding: 16px;
+    }
+    .item::before {
+      content: ""; position: absolute; left: -12px; top: 20px;
+      width: 10px; height: 10px; border-radius: 50%;
+      background: var(--acc); box-shadow: 0 0 0 3px var(--bg);
+    }
+    .item header {
+      display: grid; gap: 6px;
+    }
+    .item h3 { margin: 0; font-size: 16px; }
+    .sub { color: var(--muted); font-size: 13px; }
+    .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+    .tag { font-size: 12px; padding: 4px 8px; border-radius: 999px; background: var(--acc-soft); border: 1px solid var(--border); }
+    .content { margin-top: 10px; color: var(--fg); }
+    .content ul { margin: 8px 0 0 18px; }
+    .meta-row {
+      display: flex; gap: 12px; flex-wrap: wrap; margin-top: 10px; font-size: 12px; color: var(--muted);
+    }
+    .link { text-decoration: none; }
+    .item .actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+
+    /* 栏目：两列布局（宽屏） */
+    @media (min-width: 900px) {
+      .grid-2 {
+        display: grid; grid-template-columns: 1.2fr .8fr; gap: 22px;
+      }
+      .col { min-width: 0; }
+    }
+
+    /* 页脚 */
+    footer { margin-top: 60px; color: var(--muted); font-size: 12px; text-align: center; }
+
+    /* 打印优化 */
+    @media print {
+      header.site, nav.toc, .filters, .actions { display: none !important; }
+      body { background: white; color: black; }
+      .item, .intro { box-shadow: none; }
+      a { color: black; text-decoration: underline; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site wrap" role="banner">
+    <div class="brand">
+      <div class="avatar" aria-hidden="true">⚡</div>
+      <div class="title">
+        <h1>你的名字</h1>
+        <p>职位头衔 · 城市 / 远程 · <a class="link" href="mailto:you@example.com">you@example.com</a></p>
+      </div>
+    </div>
+    <nav class="toc" aria-label="页面目录">
+      <a href="#about">关于</a>
+      <a href="#experience">经历</a>
+      <a href="#projects">项目</a>
+      <a href="#education">教育</a>
+      <a href="#skills">技能</a>
+      <button id="themeToggle" class="chip btn btn-ghost" aria-pressed="false" aria-label="切换主题">🌗 主题</button>
+      <a class="chip btn-acc" href="#contact">📨 联系</a>
+    </nav>
+  </header>
+
+  <main class="wrap" id="content">
+    <!-- 简介 -->
+    <section id="about" class="intro" aria-labelledby="about-h">
+      <h2 id="about-h">关于我</h2>
+      <p>
+        <!-- TODO: 写一句话电梯陈述 -->
+        具有 X 年经验的前端/全栈工程师，专注性能与可用性，热爱把复杂问题变简单。
+      </p>
+      <div class="meta">
+        <!-- TODO: 可替换为你的亮点 -->
+        <span class="chip">🏆 OSS 贡献者</span>
+        <span class="chip">⚙️ 性能优化</span>
+        <span class="chip">🧪 工程质量</span>
+      </div>
+    </section>
+
+    <div class="grid-2">
+      <div class="col">
+        <!-- 经历 -->
+        <section id="experience" aria-labelledby="exp-h">
+          <h2 id="exp-h">经历</h2>
+
+          <!-- 筛选器 -->
+          <div class="filters" role="group" aria-label="经历筛选">
+            <label>筛选：</label>
+            <!-- 按标签筛选，通过 data-filter 指定 -->
+            <button class="chip btn" data-filter="all" data-active="true">全部</button>
+            <button class="chip btn" data-filter="前端">前端</button>
+            <button class="chip btn" data-filter="全栈">全栈</button>
+            <button class="chip btn" data-filter="管理">管理</button>
+            <button class="chip btn" data-filter="远程">远程</button>
+          </div>
+
+          <ol class="timeline" id="timeline" aria-live="polite">
+            <!-- 单条经历 -->
+            <li class="item" data-tags="前端 远程 SaaS">
+              <header>
+                <h3>高级前端工程师 @ 示例公司 A</h3>
+                <div class="sub">2023.06 – 至今 · 远程（GMT+8）</div>
+                <div class="tags">
+                  <span class="tag">前端</span>
+                  <span class="tag">SaaS</span>
+                  <span class="tag">React</span>
+                  <span class="tag">性能优化</span>
+                </div>
+              </header>
+              <div class="content">
+                <ul>
+                  <li>主导设计系统与组件库，核心组件覆盖率 90%，交互一致性显著提升。</li>
+                  <li>首页 TTI 从 <span class="mono">4.8s</span> 优化到 <span class="mono">1.9s</span>（P95），转化率 +12%。</li>
+                  <li>推动可观测性方案（RUM + Sentry），定位并修复前端崩溃 30+。</li>
+                </ul>
+                <div class="meta-row">
+                  <span>规模：B 轮 · 80 人</span>
+                  <span>协作：设计 / 后端 / 数据</span>
+                </div>
+                <div class="actions">
+                  <a class="chip link" href="https://example.com" target="_blank" rel="noreferrer">产品链接</a>
+                  <button class="chip btn btn-ghost" data-toggle="details">展开更多</button>
+                </div>
+                <div class="more" hidden>
+                  <ul>
+                    <li>搭建 Monorepo（pnpm + changeset），发布流程时长 -60%。</li>
+                    <li>建设可访问性基线（WCAG 2.1 AA），键盘覆盖 100%。</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+
+            <li class="item" data-tags="全栈 管理 本地部署">
+              <header>
+                <h3>技术负责人 @ 示例公司 B</h3>
+                <div class="sub">2021.03 – 2023.05 · 上海</div>
+                <div class="tags">
+                  <span class="tag">全栈</span>
+                  <span class="tag">管理</span>
+                  <span class="tag">Node.js</span>
+                  <span class="tag">Postgres</span>
+                </div>
+              </header>
+              <div class="content">
+                <ul>
+                  <li>搭建从 0 到 1 的电商中台，GTM 三个月内成交额破 500w。</li>
+                  <li>引入 CI/CD（GitHub Actions），平均上线频率从每周 1 次提升至每日多次。</li>
+                </ul>
+                <div class="meta-row">
+                  <span>团队：8 人</span>
+                  <span>职责：技术路线 / 招聘 / 质量</span>
+                </div>
+              </div>
+            </li>
+
+            <li class="item" data-tags="前端 远程 开源">
+              <header>
+                <h3>前端工程师 @ 自由职业</h3>
+                <div class="sub">2019.07 – 2021.02 · 远程</div>
+                <div class="tags">
+                  <span class="tag">前端</span>
+                  <span class="tag">开源</span>
+                  <span class="tag">Vue</span>
+                  <span class="tag">TypeScript</span>
+                </div>
+              </header>
+              <div class="content">
+                <ul>
+                  <li>为 10+ 客户交付营销落地页与小程序，平均 NPS 9.2。</li>
+                  <li>维护 2 个开源库，累计 GitHub Star 1k+。</li>
+                </ul>
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        <!-- 项目 -->
+        <section id="projects" aria-labelledby="proj-h">
+          <h2 id="proj-h">项目</h2>
+          <div class="item">
+            <header>
+              <h3>项目名称 · <a class="link" href="https://example.com" target="_blank" rel="noreferrer">demo</a></h3>
+              <div class="sub">关键词：可视化 / 数据密集型 / 高性能</div>
+            </header>
+            <div class="content">
+              <ul>
+                <li>用虚拟列表与懒加载渲染 10w+ 行数据，滚动 P95 < 16ms。</li>
+                <li>导出 PDF / CSV，国际化与权限控制完备。</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <aside class="col" aria-label="侧栏">
+        <!-- 教育 -->
+        <section id="education" aria-labelledby="edu-h">
+          <h2 id="edu-h">教育</h2>
+          <div class="item">
+            <header>
+              <h3>某某大学 · 计算机科学学士</h3>
+              <div class="sub">2015 – 2019 · GPA 3.7/4.0</div>
+            </header>
+            <div class="content">
+              <p>课程：数据结构、数据库、操作系统、计算机网络、HCI。</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 技能 -->
+        <section id="skills" aria-labelledby="skills-h">
+          <h2 id="skills-h">技能</h2>
+          <div class="item">
+            <div class="tags">
+              <!-- TODO: 替换为你的技能 -->
+              <span class="tag">JavaScript/TypeScript</span>
+              <span class="tag">React/Vue</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">CSS 工程化</span>
+              <span class="tag">性能优化</span>
+              <span class="tag">可访问性</span>
+              <span class="tag">SQL/NoSQL</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- 联系 -->
+        <section id="contact" aria-labelledby="contact-h">
+          <h2 id="contact-h">联系</h2>
+          <div class="item">
+            <div class="content">
+              <p>邮箱：<a class="link" href="mailto:you@example.com">you@example.com</a></p>
+              <p>GitHub：<a class="link" href="https://github.com/yourid" target="_blank" rel="noreferrer">@yourid</a></p>
+              <p>LinkedIn：<a class="link" href="https://www.linkedin.com/in/yourid/" target="_blank" rel="noreferrer">yourid</a></p>
+            </div>
+          </div>
+        </section>
+      </aside>
+    </div>
+
+    <footer>
+      <p>© <span id="year"></span> 你的名字 · 最后更新：<time id="lastmod"></time></p>
+    </footer>
+  </main>
+
+  <script>
+    // ===== 基础工具 =====
+    const $ = (q, el=document) => el.querySelector(q);
+    const $$ = (q, el=document) => Array.from(el.querySelectorAll(q));
+
+    // 年份与更新时间
+    (function meta() {
+      $('#year').textContent = new Date().getFullYear();
+      const d = new Date(document.lastModified || Date.now());
+      $('#lastmod').textContent = d.toISOString().slice(0,10);
+    })();
+
+    // ===== 主题切换（持久化）=====
+    (function themeToggle() {
+      const key = 'pref-theme';
+      const saved = localStorage.getItem(key);
+      if (saved === 'dark' || saved === 'light') {
+        document.documentElement.setAttribute('data-theme', saved);
+      }
+      const btn = $('#themeToggle');
+      const isDark = () => document.documentElement.getAttribute('data-theme') === 'dark';
+      const apply = (mode) => {
+        if (!mode) { document.documentElement.removeAttribute('data-theme'); }
+        else { document.documentElement.setAttribute('data-theme', mode); }
+        btn.setAttribute('aria-pressed', String(isDark()));
+      };
+      apply(saved);
+      btn.addEventListener('click', () => {
+        const now = isDark() ? 'light' : 'dark';
+        localStorage.setItem(key, now);
+        apply(now);
+      });
+    })();
+
+    // ===== 筛选器：基于 data-tags 模糊匹配 =====
+    (function filters() {
+      const container = $('.filters');
+      const items = $$('.timeline .item');
+      container?.addEventListener('click', (e) => {
+        const t = e.target.closest('[data-filter]');
+        if (!t) return;
+        // 切换 UI 状态
+        $$('.filters [data-filter]').forEach(x => x.dataset.active = 'false');
+        t.dataset.active = 'true';
+
+        const filter = t.dataset.filter;
+        items.forEach(it => {
+          const tags = (it.dataset.tags || '').toLowerCase();
+          const show = filter === 'all' || tags.includes(filter.toLowerCase());
+          it.style.display = show ? '' : 'none';
+        });
+      });
+    })();
+
+    // ===== 展开/收起详情 =====
+    (function toggles() {
+      document.addEventListener('click', (e) => {
+        const btn = e.target.closest('[data-toggle="details"]');
+        if (!btn) return;
+        const more = btn.closest('.item')?.querySelector('.more');
+        if (!more) return;
+        const hidden = more.hasAttribute('hidden');
+        more.toggleAttribute('hidden', !hidden);
+        btn.textContent = hidden ? '收起' : '展开更多';
+      });
+    })();
+
+    // ===== 键盘可访问性：Tab 焦点可见 =====
+    (function focusRing() {
+      const cls = 'kbd-focus';
+      const add = () => document.body.classList.add(cls);
+      const remove = () => document.body.classList.remove(cls);
+      window.addEventListener('keydown', (e) => e.key === 'Tab' && add());
+      window.addEventListener('mousedown', remove);
+    })();
+  </script>
+
+  <style>
+    /* 仅用于键盘导航时显示清晰的焦点环 */
+    .kbd-focus :focus {
+      outline: 2px solid var(--acc) !important;
+      outline-offset: 2px;
+      border-radius: 6px;
+    }
+  </style>
+</body>
+</html>
