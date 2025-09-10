@@ -42,7 +42,7 @@ Publications
   Chen Wei<sup>1</sup>, **Chi Zhang<sup>1</sup>**, Jiachen Zou, Haotian Deng, Dietmar Heinke, Quanying Liu, <sup>1</sup> means co-first author
 
   *ICML2025 poster*
-- [**Synthesizing Images on Perceptual Boundaries of ANNs for Uncovering Human Perceptual Variability on Facial Expressions**]
+- [**Synthesizing Images on Perceptual Boundaries of ANNs for Uncovering Human Perceptual Variability on Facial Expressions**](https://arxiv.org/abs/2507.14549)
   Haotian Deng<sup>1</sup>, **Chi Zhang<sup>1</sup>**, Chen Wei, Quanying Liu, <sup>1</sup> means co-first author
 
   *IJCNN2025 Oral*
