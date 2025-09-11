@@ -13,7 +13,9 @@ layout: page
 
     <!-- SUSTech -->
     <li class="experience__item">
-      <div class="experience__icon" aria-hidden="true">💻</div>
+      <div class="experience__icon" aria-hidden="true">
+        <img class="experience__logo" src="/assets/images/logos/sustech.svg" alt="SUSTech logo" onerror="this.style.display='none'; this.parentNode.dataset.fallback='💻';">
+      </div>
       <div class="experience__body">
         <div class="experience__head">
           <span class="experience__role">Research Intern</span>
@@ -36,7 +38,9 @@ layout: page
 
     <!-- Columbia -->
     <li class="experience__item">
-      <div class="experience__icon" aria-hidden="true">🛠️</div>
+      <div class="experience__icon" aria-hidden="true">
+        <img class="experience__logo" src="/assets/images/logos/columbia.svg" alt="Columbia University logo" onerror="this.style.display='none'; this.parentNode.dataset.fallback='🛠️';">
+      </div>
       <div class="experience__body">
         <div class="experience__head">
           <span class="experience__role">Research Intern</span>
@@ -60,7 +64,9 @@ layout: page
 
     <!-- Princeton -->
     <li class="experience__item">
-      <div class="experience__icon" aria-hidden="true">🧠</div>
+      <div class="experience__icon" aria-hidden="true">
+        <img class="experience__logo" src="/assets/images/logos/princeton.svg" alt="Princeton University logo" onerror="this.style.display='none'; this.parentNode.dataset.fallback='🧠';">
+      </div>
       <div class="experience__body">
         <div class="experience__head">
           <span class="experience__role">Research Collaboration</span>
@@ -88,38 +94,54 @@ layout: page
 
     <!-- SUSTech degree -->
     <li class="experience__item">
-      <div class="experience__icon" aria-hidden="true">🎓</div>
+      <div class="experience__icon" aria-hidden="true">
+        <img class="experience__logo" src="/assets/images/logos/sustech.svg" alt="SUSTech logo"
+             onerror="this.style.display='none'; this.parentNode.dataset.fallback='🎓';">
+      </div>
       <div class="experience__body">
         <div class="experience__head">
           <span class="experience__role">B.Eng. in Intelligent Medical Engineering</span>
           <span class="experience__sep">·</span>
           <span class="experience__org">Southern University of Science and Technology</span>
           <span class="experience__time">
-            <time datetime="2022-09">September 2022</time> – <time datetime="2026-06">June 2026</time>
+            <time datetime="2022-09">September 2022</time> – 
+            <time datetime="2026-06">June 2026</time>
           </span>
-          <span class="experience__gpa">GPA: 3.86/4.00</span>
+        </div>
+        <!-- 新增独立信息行 -->
+        <div class="experience__details">
+          <div><strong>GPA:</strong> 3.86 / 4.00</div>
         </div>
       </div>
     </li>
-
+    
     <!-- U of Toronto exchange -->
     <li class="experience__item">
-      <div class="experience__icon" aria-hidden="true">🎓</div>
+      <div class="experience__icon" aria-hidden="true">
+        <img class="experience__logo" src="/assets/images/logos/uoft.svg" alt="University of Toronto logo"
+             onerror="this.style.display='none'; this.parentNode.dataset.fallback='🎓';">
+      </div>
       <div class="experience__body">
         <div class="experience__head">
           <span class="experience__role">Tuition-free Exchange Student</span>
           <span class="experience__sep">·</span>
           <span class="experience__org">Faculty of Applied Science &amp; Engineering, University of Toronto</span>
           <span class="experience__time">
-            <time datetime="2026-01">January 2026</time> – <time datetime="2026-04">April 2026</time>
+            <time datetime="2026-01">January 2026</time> – 
+            <time datetime="2026-04">April 2026</time>
           </span>
-          <span class="experience__gpa">GPA: 4.00/4.00 (all A+)</span>
         </div>
-        <p class="experience__desc">
-          Courses: Scientific Computing, <span class="nowrap">Stochastic Operations Research</span>, Computer Organization, Multimedia Systems
-        </p>
+        <!-- 独立信息区块 -->
+        <div class="experience__details">
+          <div><strong>GPA:</strong> 4.00 / 4.00 (all A+)</div>
+          <div><strong>Courses:</strong> Scientific Computing, 
+            <span class="nowrap">Stochastic Operations Research</span>, 
+            Computer Organization, Multimedia Systems
+          </div>
+        </div>
       </div>
     </li>
+
   </ul>
 </section>
 
@@ -140,12 +162,26 @@ layout: page
   }
   .experience__item:first-child { border-top: 0; }
 
-  /* 图标 */
+  /* 图标槽与 logo */
   .experience__icon {
     width: 40px; height: 40px; line-height: 40px;
     text-align: center; border-radius: 8px;
     background: rgba(127,127,127,.08);
+    position: relative;
+  }
+  /* 当图片加载失败时显示回退 emoji */
+  .experience__icon::before {
+    content: attr(data-fallback);
+    position: absolute; inset: 0;
+    display: grid; place-items: center;
     font-size: 1.1rem;
+  }
+  .experience__logo {
+    width: 100%; height: 100%;
+    object-fit: contain; display: block;
+    padding: 6px; /* 留白，避免贴边 */
+    image-rendering: -webkit-optimize-contrast;
+    mix-blend-mode: multiply; /* 白底更自然 */
   }
 
   /* 头部信息 */
@@ -180,10 +216,23 @@ layout: page
     line-height: 1.2;
   }
 
+  .experience__details {
+  margin: 0.4rem 0 0.2rem;
+  font-size: .93em;
+  line-height: 1.4;
+  opacity: .85;
+  }
+  .experience__details strong {
+    font-weight: 600;
+    margin-right: .3rem;
+  }
+
+
   /* 暗色模式适配 */
   @media (prefers-color-scheme: dark) {
     .experience__item { border-top-color: rgba(255,255,255,.12); }
     .experience__icon { background: rgba(255,255,255,.06); }
+    .experience__logo { filter: brightness(1.05) contrast(1.05); mix-blend-mode: normal; }
     .experience__tags li { border-color: rgba(255,255,255,.5); }
   }
 </style>
