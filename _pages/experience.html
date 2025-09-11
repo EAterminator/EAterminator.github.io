@@ -4,13 +4,14 @@ permalink: /experience/
 layout: page
 ---
 
-<section class="experience">
+<section class="experience" aria-label="Experience timeline">
   <h1 class="experience__title">Experience</h1>
 
   <!-- 研究经历 -->
   <h2 class="experience__section">Research</h2>
   <ul class="experience__list">
-    <!-- 单项示例 1 -->
+
+    <!-- SUSTech -->
     <li class="experience__item">
       <div class="experience__icon" aria-hidden="true">💻</div>
       <div class="experience__body">
@@ -18,17 +19,22 @@ layout: page
           <span class="experience__role">Research Intern</span>
           <span class="experience__sep">·</span>
           <span class="experience__org">Southern University of Science and Technology</span>
-          <span class="experience__time">June, 2024 – Present</span>
+          <span class="experience__time">
+            <time datetime="2024-06">June 2024</time> – <time datetime="present">Present</time>
+          </span>
         </div>
-        <ul class="Advisor">
-          Prof. Quanying Liu
-        <ul class="experience__tags">
-          Generative Models, Cognitive Science
+        <div class="experience__meta">
+          <span class="experience__label">Advisor:</span>
+          <span>Prof. Quanying Liu</span>
+        </div>
+        <ul class="experience__tags" aria-label="Research topics">
+          <li>Generative Models</li>
+          <li>Cognitive Science</li>
         </ul>
       </div>
     </li>
 
-    <!-- 单项示例 2 -->
+    <!-- Columbia -->
     <li class="experience__item">
       <div class="experience__icon" aria-hidden="true">🛠️</div>
       <div class="experience__body">
@@ -36,30 +42,41 @@ layout: page
           <span class="experience__role">Research Intern</span>
           <span class="experience__sep">·</span>
           <span class="experience__org">Columbia University</span>
-          <span class="experience__time">January, 2025 - June, 2025</span>
+          <span class="experience__time">
+            <time datetime="2025-01">January 2025</time> – <time datetime="2025-06">June 2025</time>
+          </span>
         </div>
-        <ul class="Advisor">
-          Prof. Junhao Wen
-        </ul>
-        <ul class="experience__tags">
-          Generative Models, Clustering, Disease Heterogeinity
+        <div class="experience__meta">
+          <span class="experience__label">Advisor:</span>
+          <span>Prof. Junhao Wen</span>
+        </div>
+        <ul class="experience__tags" aria-label="Research topics">
+          <li>Generative Models</li>
+          <li>Clustering</li>
+          <li>Disease Heterogeneity</li>
         </ul>
       </div>
     </li>
+
+    <!-- Princeton -->
     <li class="experience__item">
-      <div class="experience__icon" aria-hidden="true">🛠️</div>
+      <div class="experience__icon" aria-hidden="true">🧠</div>
       <div class="experience__body">
         <div class="experience__head">
           <span class="experience__role">Research Collaboration</span>
           <span class="experience__sep">·</span>
           <span class="experience__org">Princeton University</span>
-          <span class="experience__time">August, 2025 - present remote</span>
+          <span class="experience__time">
+            <time datetime="2025-08">August 2025</time> – <time datetime="present">Present</time> <span class="experience__note">remote</span>
+          </span>
         </div>
-        <ul class="Advisor">
-          Dr. Jianqiao Zhu
-        </ul>
-        <ul class="experience__tags">
-          Generative Models, Cognitive Science
+        <div class="experience__meta">
+          <span class="experience__label">Collaborator:</span>
+          <span>Dr. Jianqiao Zhu</span>
+        </div>
+        <ul class="experience__tags" aria-label="Research topics">
+          <li>Generative Models</li>
+          <li>Cognitive Science</li>
         </ul>
       </div>
     </li>
@@ -68,6 +85,8 @@ layout: page
   <!-- 教育 -->
   <h2 class="experience__section">Education</h2>
   <ul class="experience__list">
+
+    <!-- SUSTech degree -->
     <li class="experience__item">
       <div class="experience__icon" aria-hidden="true">🎓</div>
       <div class="experience__body">
@@ -75,23 +94,29 @@ layout: page
           <span class="experience__role">B.Eng. in Intelligent Medical Engineering</span>
           <span class="experience__sep">·</span>
           <span class="experience__org">Southern University of Science and Technology</span>
-          <span class="experience__time">September, 2022 - June, 2026</span>
-          <span class="experience__gpa">GPA: 3.86/4</span>
+          <span class="experience__time">
+            <time datetime="2022-09">September 2022</time> – <time datetime="2026-06">June 2026</time>
+          </span>
+          <span class="experience__gpa">GPA: 3.86/4.00</span>
         </div>
       </div>
     </li>
+
+    <!-- U of Toronto exchange -->
     <li class="experience__item">
       <div class="experience__icon" aria-hidden="true">🎓</div>
       <div class="experience__body">
         <div class="experience__head">
           <span class="experience__role">Tuition-free Exchange Student</span>
           <span class="experience__sep">·</span>
-          <span class="experience__org">Faculty of Applied Science and Engineering, University of Toronto</span>
-          <span class="experience__time">January, 2026 - April, 2026</span>
-          <span class="experience__gpa">GPA: 4/4(all A+)</span>
+          <span class="experience__org">Faculty of Applied Science &amp; Engineering, University of Toronto</span>
+          <span class="experience__time">
+            <time datetime="2026-01">January 2026</time> – <time datetime="2026-04">April 2026</time>
+          </span>
+          <span class="experience__gpa">GPA: 4.00/4.00 (all A+)</span>
         </div>
         <p class="experience__desc">
-          Courses taken: Scientific Computing, Stocastic Operations Research, Computer Organization, Multimedia Systems
+          Courses: Scientific Computing, <span class="nowrap">Stochastic Operations Research</span>, Computer Organization, Multimedia Systems
         </p>
       </div>
     </li>
@@ -99,12 +124,13 @@ layout: page
 </section>
 
 <style>
-  /* 极简局部样式：尽量继承站点主题，仅做布局与间距 */
+  /* 容器与区块 */
   .experience { max-width: 900px; margin: 0 auto; }
   .experience__title { margin-top: 0; }
   .experience__section { margin: 2rem 0 0.75rem; }
-  .experience__list { list-style: none; padding: 0; margin: 0; }
 
+  /* 列表与项 */
+  .experience__list { list-style: none; padding: 0; margin: 0; }
   .experience__item {
     display: grid;
     grid-template-columns: 40px 1fr;
@@ -114,36 +140,47 @@ layout: page
   }
   .experience__item:first-child { border-top: 0; }
 
-  /* 图标区域：用 emoji，无需外部资源；继承字体大小即可 */
+  /* 图标 */
   .experience__icon {
     width: 40px; height: 40px; line-height: 40px;
     text-align: center; border-radius: 8px;
     background: rgba(127,127,127,.08);
+    font-size: 1.1rem;
   }
 
+  /* 头部信息 */
   .experience__head {
     display: flex; flex-wrap: wrap; align-items: baseline; gap: .4rem .6rem;
     font-weight: 600;
   }
   .experience__sep { opacity: .5; }
   .experience__org a { text-decoration: underline; }
+  .experience__time { margin-left: auto; font-weight: 400; opacity: .75; font-size: .95em; }
+  .experience__gpa { margin-left: .6rem; font-weight: 500; opacity: .85; }
+  .experience__note { opacity: .6; font-weight: 400; }
 
-  .experience__time {
-    margin-left: auto;
-    font-weight: 400; opacity: .7; font-size: .95em;
-  }
   @media (max-width: 640px) {
-    .experience__time { width: 100%; margin-left: 0; }
+    .experience__time, .experience__gpa { width: 100%; margin-left: 0; }
   }
 
+  /* 元信息与描述 */
+  .experience__meta { margin: .25rem 0 .4rem; font-size: .95em; opacity: .9; }
+  .experience__label { opacity: .7; margin-right: .35rem; }
   .experience__desc { margin: .4rem 0 0.6rem; }
-  .experience__tags { display: flex; flex-wrap: wrap; gap: .4rem; margin: 0; padding: 0; list-style: none; }
+  .nowrap { white-space: nowrap; }
+
+  /* 主题标签（徽标） */
+  .experience__tags {
+    display: flex; flex-wrap: wrap; gap: .4rem;
+    margin: 0; padding: 0; list-style: none;
+  }
   .experience__tags li {
-    font-size: .85em; padding: .2rem .5rem; border-radius: 999px;
-    border: 1px solid currentColor; opacity: .6;
+    font-size: .85em; padding: .2rem .6rem; border-radius: 999px;
+    border: 1px solid currentColor; opacity: .7;
+    line-height: 1.2;
   }
 
-  /* 适配暗色主题（如果你的主题已处理暗色，这段也能自然继承） */
+  /* 暗色模式适配 */
   @media (prefers-color-scheme: dark) {
     .experience__item { border-top-color: rgba(255,255,255,.12); }
     .experience__icon { background: rgba(255,255,255,.06); }
