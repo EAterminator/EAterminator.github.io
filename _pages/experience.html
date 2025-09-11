@@ -192,18 +192,26 @@ layout: page
   .experience__item--withbanner .experience__icon { display: none; }
 
   /* Logo 横幅（单独一行，允许宽logo自然显示） */
+  /* Logo 横幅 */
   .experience__brand {
     display: block;
-    margin-bottom: .4rem;
-    min-height: 44px; /* 避免闪烁跳动 */
+    margin-bottom: .6rem;   /* 略增下边距，留出呼吸感 */
+    min-height: 56px;
   }
+  
+  /* 原来是 48px，这里调大 */
   .brand__logo {
-    max-height: 48px;  /* 控制高度即可，宽度自适应 */
+    max-height: 72px;
     height: auto;
     width: auto;
     display: block;
     image-rendering: -webkit-optimize-contrast;
-    mix-blend-mode: multiply; /* 浅色底更自然 */
+    mix-blend-mode: multiply;
+  }
+  
+  /* 移动端稍微小一点，避免顶天 */
+  @media (max-width: 640px) {
+    .brand__logo { max-height: 60px; }
   }
   /* 图片加载失败时，显示文字回退 */
   .experience__brand.brand--fallback::before{
