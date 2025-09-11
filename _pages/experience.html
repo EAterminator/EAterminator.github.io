@@ -12,11 +12,18 @@ layout: page
   <ul class="experience__list">
 
     <!-- SUSTech -->
-    <li class="experience__item">
+    <li class="experience__item experience__item--withbanner">
       <div class="experience__icon" aria-hidden="true">
-        <img class="experience__logo" src="images/logos/sustech.png" alt="SUSTech logo" onerror="this.style.display='none'; this.parentNode.dataset.fallback='💻';">
+        <!-- 仍保留占位（被CSS隐藏），避免布局跳变 -->
+        <img class="experience__logo" src="{{ '/images/logos/sustech.png' | relative_url }}" alt="SUSTech logo">
       </div>
       <div class="experience__body">
+        <!-- 单独一行的 Logo 横幅 -->
+        <div class="experience__brand" data-fallback="SUSTech">
+          <img class="brand__logo" src="{{ '/images/logos/sustech.png' | relative_url }}" alt="SUSTech logo"
+               onerror="this.style.display='none';this.parentNode.classList.add('brand--fallback');">
+        </div>
+
         <div class="experience__head">
           <span class="experience__role">Research Intern</span>
           <span class="experience__sep">·</span>
@@ -37,11 +44,16 @@ layout: page
     </li>
 
     <!-- Columbia -->
-    <li class="experience__item">
+    <li class="experience__item experience__item--withbanner">
       <div class="experience__icon" aria-hidden="true">
-        <img class="experience__logo" src="images/logos/columbia.png" alt="Columbia University logo" onerror="this.style.display='none'; this.parentNode.dataset.fallback='🛠️';">
+        <img class="experience__logo" src="{{ '/images/logos/columbia.png' | relative_url }}" alt="Columbia University logo">
       </div>
       <div class="experience__body">
+        <div class="experience__brand" data-fallback="Columbia University">
+          <img class="brand__logo" src="{{ '/images/logos/columbia.png' | relative_url }}" alt="Columbia University logo"
+               onerror="this.style.display='none';this.parentNode.classList.add('brand--fallback');">
+        </div>
+
         <div class="experience__head">
           <span class="experience__role">Research Intern</span>
           <span class="experience__sep">·</span>
@@ -63,11 +75,16 @@ layout: page
     </li>
 
     <!-- Princeton -->
-    <li class="experience__item">
+    <li class="experience__item experience__item--withbanner">
       <div class="experience__icon" aria-hidden="true">
-        <img class="experience__logo" src="images/logos/Princeton.svg" alt="Princeton University logo" onerror="this.style.display='none'; this.parentNode.dataset.fallback='🧠';">
+        <img class="experience__logo" src="{{ '/images/logos/Princeton.svg' | relative_url }}" alt="Princeton University logo">
       </div>
       <div class="experience__body">
+        <div class="experience__brand" data-fallback="Princeton University">
+          <img class="brand__logo" src="{{ '/images/logos/Princeton.svg' | relative_url }}" alt="Princeton University logo"
+               onerror="this.style.display='none';this.parentNode.classList.add('brand--fallback');">
+        </div>
+
         <div class="experience__head">
           <span class="experience__role">Research Collaboration</span>
           <span class="experience__sep">·</span>
@@ -93,12 +110,16 @@ layout: page
   <ul class="experience__list">
 
     <!-- SUSTech degree -->
-    <li class="experience__item">
+    <li class="experience__item experience__item--withbanner">
       <div class="experience__icon" aria-hidden="true">
-        <img class="experience__logo" src="images/logos/sustech.png" alt="SUSTech logo"
-             onerror="this.style.display='none'; this.parentNode.dataset.fallback='🎓';">
+        <img class="experience__logo" src="{{ '/images/logos/sustech.png' | relative_url }}" alt="SUSTech logo">
       </div>
       <div class="experience__body">
+        <div class="experience__brand" data-fallback="SUSTech">
+          <img class="brand__logo" src="{{ '/images/logos/sustech.png' | relative_url }}" alt="SUSTech logo"
+               onerror="this.style.display='none';this.parentNode.classList.add('brand--fallback');">
+        </div>
+
         <div class="experience__head">
           <span class="experience__role">B.Eng. in Intelligent Medical Engineering</span>
           <span class="experience__sep">·</span>
@@ -108,7 +129,6 @@ layout: page
             <time datetime="2026-06">June 2026</time>
           </span>
         </div>
-        <!-- 新增独立信息行 -->
         <div class="experience__details">
           <div><strong>GPA:</strong> 3.86 / 4.00</div>
         </div>
@@ -116,12 +136,16 @@ layout: page
     </li>
     
     <!-- U of Toronto exchange -->
-    <li class="experience__item">
+    <li class="experience__item experience__item--withbanner">
       <div class="experience__icon" aria-hidden="true">
-        <img class="experience__logo" src="images/logos/uoft.svg" alt="University of Toronto logo"
-             onerror="this.style.display='none'; this.parentNode.dataset.fallback='🎓';">
+        <img class="experience__logo" src="{{ '/images/logos/uoft.svg' | relative_url }}" alt="University of Toronto logo">
       </div>
       <div class="experience__body">
+        <div class="experience__brand" data-fallback="University of Toronto">
+          <img class="brand__logo" src="{{ '/images/logos/uoft.svg' | relative_url }}" alt="University of Toronto logo"
+               onerror="this.style.display='none';this.parentNode.classList.add('brand--fallback');">
+        </div>
+
         <div class="experience__head">
           <span class="experience__role">Tuition-free Exchange Student</span>
           <span class="experience__sep">·</span>
@@ -131,7 +155,6 @@ layout: page
             <time datetime="2026-04">April 2026</time>
           </span>
         </div>
-        <!-- 独立信息区块 -->
         <div class="experience__details">
           <div><strong>GPA:</strong> 4.00 / 4.00 (all A+)</div>
           <div><strong>Courses:</strong> Scientific Computing, 
@@ -162,27 +185,46 @@ layout: page
   }
   .experience__item:first-child { border-top: 0; }
 
-  /* 图标槽与 logo */
+  /* 让“带横幅”的项目改为单列布局，并隐藏左侧小图标列 */
+  .experience__item--withbanner { grid-template-columns: 1fr; }
+  .experience__item--withbanner .experience__icon { display: none; }
+
+  /* Logo 横幅（单独一行，允许宽logo自然显示） */
+  .experience__brand {
+    display: block;
+    margin-bottom: .4rem;
+    min-height: 44px; /* 避免闪烁跳动 */
+  }
+  .brand__logo {
+    max-height: 48px;  /* 控制高度即可，宽度自适应 */
+    height: auto;
+    width: auto;
+    display: block;
+    image-rendering: -webkit-optimize-contrast;
+    mix-blend-mode: multiply; /* 浅色底更自然 */
+  }
+  /* 图片加载失败时，显示文字回退 */
+  .experience__brand.brand--fallback::before{
+    content: attr(data-fallback);
+    display: inline-block;
+    font-weight: 600;
+    opacity: .6;
+  }
+
+  /* 旧的左侧图标槽（保留，但会被隐藏） */
   .experience__icon {
     width: 40px; height: 40px; line-height: 40px;
     text-align: center; border-radius: 8px;
     background: rgba(127,127,127,.08);
     position: relative;
   }
-  /* 当图片加载失败时显示回退 emoji */
   .experience__icon::before {
     content: attr(data-fallback);
     position: absolute; inset: 0;
     display: grid; place-items: center;
     font-size: 1.1rem;
   }
-  .experience__logo {
-    width: 100%; height: 100%;
-    object-fit: contain; display: block;
-    padding: 6px; /* 留白，避免贴边 */
-    image-rendering: -webkit-optimize-contrast;
-    mix-blend-mode: multiply; /* 白底更自然 */
-  }
+  .experience__logo { width: 100%; height: 100%; object-fit: contain; display: block; padding: 6px; }
 
   /* 头部信息 */
   .experience__head {
@@ -197,6 +239,7 @@ layout: page
 
   @media (max-width: 640px) {
     .experience__time, .experience__gpa { width: 100%; margin-left: 0; }
+    .brand__logo { max-height: 44px; }
   }
 
   /* 元信息与描述 */
@@ -217,22 +260,20 @@ layout: page
   }
 
   .experience__details {
-  margin: 0.4rem 0 0.2rem;
-  font-size: .93em;
-  line-height: 1.4;
-  opacity: .85;
+    margin: 0.4rem 0 0.2rem;
+    font-size: .93em;
+    line-height: 1.4;
+    opacity: .85;
   }
-  .experience__details strong {
-    font-weight: 600;
-    margin-right: .3rem;
-  }
-
+  .experience__details strong { font-weight: 600; margin-right: .3rem; }
 
   /* 暗色模式适配 */
   @media (prefers-color-scheme: dark) {
     .experience__item { border-top-color: rgba(255,255,255,.12); }
     .experience__icon { background: rgba(255,255,255,.06); }
-    .experience__logo { filter: brightness(1.05) contrast(1.05); mix-blend-mode: normal; }
+    .brand__logo { filter: brightness(1.05) contrast(1.05); mix-blend-mode: normal; }
     .experience__tags li { border-color: rgba(255,255,255,.5); }
+    /* 如果某个深色logo在暗色模式看不清，为该<img>单独加 class="brand__logo logo--invert" 即可反色： */
+    .logo--invert { filter: invert(1) contrast(.95); }
   }
 </style>
