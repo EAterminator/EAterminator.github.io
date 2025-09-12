@@ -31,7 +31,7 @@ Publications
   Youzhi Qu, Chen Wei, Penghui Du, Wenxin Che, **Chi Zhang**, Wanli Ouyang, Yatao Bian, Feiyang Xu, Bin Hu, Kai Du, Haiyan Wu, Jia Liu, Quanying Liu
 
   *iScience*, Volume 27, Issue 4, Article 109550
-- [**Promoting interactions between cognitive science and large language models**](https://www.cell.com/the-innovation/pdf/S2666-6758(24)00017-1.pdf)
+- [**Promoting interactions between cognitive science and large language models**](https://www.cell.com/the-innovation/pdf/S2666-6758(24)00017-1.pdf)  
   Youzhi Qu, Penghui Du, Wenxin Che, Chen Wei, **Chi Zhang**, Wanli Ouyang, Yatao Bian, Feiyang Xu, Bin Hu, Kai Du, Haiyan Wu, Jia Liu, Quanying Liu 
 
   *The Innovation*, Volume 5, Issue 2, 100579
