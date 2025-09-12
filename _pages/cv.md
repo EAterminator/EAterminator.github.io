@@ -19,11 +19,11 @@ Education
 
 Publications
 ======
-- [**Synthesizing Images on Perceptual Boundaries of ANNs for Uncovering and Manipulating Human Perceptual Variability**](https://arxiv.org/abs/2505.03641)
+- [**Synthesizing Images on Perceptual Boundaries of ANNs for Uncovering and Manipulating Human Perceptual Variability**](https://arxiv.org/abs/2505.03641)  
   Chen Wei<sup>1</sup>, **Chi Zhang<sup>1</sup>**, Jiachen Zou, Haotian Deng, Dietmar Heinke, Quanying Liu
 
   *ICML2025 Poster*
-- [**Synthesizing Images on Perceptual Boundaries of ANNs for Uncovering Human Perceptual Variability on Facial Expressions**](https://arxiv.org/abs/2507.14549)
+- [**Synthesizing Images on Perceptual Boundaries of ANNs for Uncovering Human Perceptual Variability on Facial Expressions**](https://arxiv.org/abs/2507.14549)  
   Haotian Deng<sup>1</sup>, **Chi Zhang<sup>1</sup>**, Chen Wei, Quanying Liu
 
   *IJCNN2025 Oral*
