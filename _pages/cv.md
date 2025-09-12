@@ -14,9 +14,6 @@ Education
 * B.Eng. in Intelligent Medical Engineering, Southern University of Science and Technology(SUSTech), 2022-present (**GPA:3.86/4**)
 * **Tuition-free** exchange student at the Faculty of Applied Science and Engineering, University of Toronto(4 spots in SUSTech every year), Jan. 2025-Apr. 2025 (**GPA: 4/4, all A+**)
 
-# Academic Performance:
-- **GPA**: 3.86/4  
-
 Publications
 ======
 - [**Synthesizing Images on Perceptual Boundaries of ANNs for Uncovering and Manipulating Human Perceptual Variability**](https://arxiv.org/abs/2505.03641)  
