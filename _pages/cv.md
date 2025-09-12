@@ -35,6 +35,8 @@ Publications
   Youzhi Qu, Penghui Du, Wenxin Che, Chen Wei, **Chi Zhang**, Wanli Ouyang, Yatao Bian, Feiyang Xu, Bin Hu, Kai Du, Haiyan Wu, Jia Liu, Quanying Liu 
 
   *The Innovation*, Volume 5, Issue 2, 100579
+
+  
 <sup>1</sup> means co-first author
 
 Honors and Awards
