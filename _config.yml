@@ -21,7 +21,7 @@ repository               : "EAterminator/EAterminator.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "small_photo.jpg"
+  avatar           : "personal_photo.jpg"
   name             : "Chi Zhang(张弛)"
   pronouns         : "he/his"
   location         : "Shenzhen, China"
