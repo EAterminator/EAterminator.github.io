@@ -7,7 +7,7 @@ redirect_form:
   - /about.html
 ---
 
-Hi! My name is Chi Zhang, and I am a 4th year undergraduate student at [Department of Biomedical Engineering](https://bme.sustech.edu.cn/), [Southern University of Science and Technology(SUSTech)](https://www.sustech.edu.cn/). My research lies at the crosssection of Machine Learning and Cognitive Science.
+Hi! My name is Chi Zhang, and I am a 4th year undergraduate student at [Department of Biomedical Engineering](https://bme.sustech.edu.cn/), [Southern University of Science and Technology(SUSTech)](https://www.sustech.edu.cn/). My research lies at the cross section of Machine Learning and Cognitive Science.
 
 In SUSTech, I work in [Neural Computing and Control(NCC) Lab](https://faculty.sustech.edu.cn/?cat=2&tagid=liuqy&orderby=date&iscss=1&snapid=1&go=2) at the Department of Biomedical Engineering with  [Prof. Quanying Liu](https://scholar.google.ch/citations?user=UpP9hJ8AAAAJ&hl=en). I was an intern at [LABS](https://labs-laboratory.com/) in Columbia Univeristy, working with [Prof. Junhao Wen](https://www.columbiaradiology.org/profile/junhao-hao-wen-phd) from January, 2025 to June, 2025 on modeling disease heterogeneity.
 
