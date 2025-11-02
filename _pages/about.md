@@ -14,7 +14,7 @@ In SUSTech, I work in [Neural Computing and Control(NCC) Lab](https://faculty.su
 [Email](mailto:12210315@mail.sustech.edu.cn) / [Github](https://github.com/EAterminator) /
 
 # News
-Oct 31st, 2025: Awarded the "Rixin" Scholarship Nomination Award in SUSTech (9/~4000).
+Oct 31st, 2025: Awarded the "Rixin" Scholarship Nomination Award in SUSTech.
 
 July 21st, 2025: Finished my travels and returned to Shenzhen.
 
