@@ -14,20 +14,22 @@ In SUSTech, I work in [Neural Computing and Control(NCC) Lab](https://faculty.su
 [Email](mailto:12210315@mail.sustech.edu.cn) / [Github](https://github.com/EAterminator) /
 
 # News
-July 21st, 2025: Finished my travels and returned to Shenzhen. What an experience!
+Oct 31st, 2025: Awarded the "Rixin" Scholarship in SUSTech (9/~4000).
 
-July 17th, 2025: Presented our poster Synthesizing Images on Perceptual Boundaries of ANNs for Uncovering and Manipulating Human Perceptual Variability at ICML2025, Vancouver, Canada!
+July 21st, 2025: Finished my travels and returned to Shenzhen.
 
-July 4th, 2025: Gave an oral presentation of our work Synthesizing Images on Perceptual Boundaries of ANNs for Uncovering Human Perceptual Variability on Facial Expressions at IJCNN2025, Rome, Italy!
+July 17th, 2025: Presented our poster Synthesizing Images on Perceptual Boundaries of ANNs for Uncovering and Manipulating Human Perceptual Variability at ICML2025, Vancouver, Canada.
+
+July 4th, 2025: Gave an oral presentation of our work Synthesizing Images on Perceptual Boundaries of ANNs for Uncovering Human Perceptual Variability on Facial Expressions at IJCNN2025, Rome, Italy.
 
 July 1st, 2025: Started my journey of attending 2 conferences(ICML & IJCNN) and traveling around the world!
 
-May 1st, 2025: Our work, [Synthesizing Images on Perceptual Boundaries of ANNs for Uncovering and Manipulating Human Perceptual Variability](https://arxiv.org/abs/2505.03641), has been accepted at ICML 2025! So happy to see my work recognized by the community! Check out our [project website](https://eaterminator.github.io/BAM/) for more details!
+May 1st, 2025: Our work, [Synthesizing Images on Perceptual Boundaries of ANNs for Uncovering and Manipulating Human Perceptual Variability](https://arxiv.org/abs/2505.03641), has been accepted at ICML 2025! So happy to see my work recognized by the community! Check out our [project website](https://eaterminator.github.io/BAM/) for more details.
 
 April 28th, 2025: I finished my exhange at University of Toronto with GPA 4/4 (all A+)! Such an incredible journey!
 
-April 1st, 2025: Our work, [Synthesizing Images on Perceptual Boundaries of ANNs for Uncovering Human Perceptual Variability on Facial Expressions](https://arxiv.org/abs/2507.14549), has been accepted at IJCNN 2025 as an oral presentation!
+April 1st, 2025: Our work, [Synthesizing Images on Perceptual Boundaries of ANNs for Uncovering Human Perceptual Variability on Facial Expressions](https://arxiv.org/abs/2507.14549), has been accepted at IJCNN 2025 as an **oral** presentation.
 
-Jan 12th, 2025: I started my exchange at University of Toronto!
+Jan 12th, 2025: I started my exchange at University of Toronto.
 
-Jan 1st, 2025: I started my internship at Columbia University, working with Professor Junhao Wen on modeling disease heterogeneity!
+Jan 1st, 2025: I started my internship at Columbia University, working with Professor Junhao Wen on modeling disease heterogeneity.
